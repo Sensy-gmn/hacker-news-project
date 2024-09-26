@@ -1,14 +1,12 @@
-const InfoCard = ({name, description, image}) => {
+import React from 'react';
+
+function InfoCard({item}) {
     return(
-        <div className="cardContainer">
-            <header>
-                <h1>{title}</h1>
-                <h2>{author}</h2>
-            </header>
-            <div className="flex flex-col">
-                <img className="flex items-center justify-center h-46 object-cover overflow-hidden" src={image} alt={name} />
-                <p>{story_text}</p>
-            </div>
+        <div>
+            <a href={item.url} target='blank'>
+                <h1>{item.title}</h1>
+                <h2>{item.author}</h2>
+            </a>
         </div>
     )
 }
