@@ -3,10 +3,19 @@ import { useEffect, useState } from "react";
 import ArticleDetails from "./Components/ArticleDetails";
 
 function App() {
+    // ------------------------------------------ PAGINATION ------------------------------------------//
     const [articles, setArticles] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
     const limitArticleByPage = 15;
 
+    const handleNextPage = () => {
+        setCurrentPage((prevPage) => prevPage + 1);
+    };
+
+    const handlePreviousPage = () => {
+        setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
+    };
+    // ------------------------------------------ PAGINATION ------------------------------------------//
     useEffect(() => {
         const fetchArticles = async (page, params1, params2) => {
             try {
@@ -28,14 +37,6 @@ function App() {
 
         fetchArticles(currentPage, "story", limitArticleByPage);
     }, [currentPage]);
-
-    const handleNextPage = () => {
-        setCurrentPage((prevPage) => prevPage + 1);
-    };
-
-    const handlePreviousPage = () => {
-        setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
-    };
 
     console.log(articles);
 
