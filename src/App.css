@@ -1,4 +1,4 @@
-body {
+/* body {
     @apply bg-gray-100 text-gray-900;
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -6,4 +6,61 @@ body {
   
   .container {
     @apply max-w-4xl mx-auto;
-  }
+  } */
+
+  /* App.css */
+
+/* Application global styles */
+/* App.css */
+
+/* Application global styles */
+body {
+  @apply bg-white text-gray-900;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  @apply max-w-4xl mx-auto;
+}
+
+h1, h2 {
+  @apply text-orange-600;
+}
+
+/* Mode sombre */
+.dark body {
+  @apply bg-darkBg text-darkText;
+}
+
+.dark h1, .dark h2 {
+  @apply text-orange-400;
+}
+
+.dark .container {
+  @apply bg-darkBg;
+}
+
+a {
+  @apply text-orange-600 hover:text-orange-500;
+}
+
+.dark a {
+  @apply text-orange-400 hover:text-orange-300;
+}
+
+button {
+  @apply bg-orange-500 text-white hover:bg-orange-600 rounded-md;
+}
+
+.dark button {
+  @apply bg-darkCard text-darkText hover:bg-darkBorder;
+}
+
+p {
+  @apply text-gray-700;
+}
+
+.dark p {
+  @apply text-darkText;
+}
