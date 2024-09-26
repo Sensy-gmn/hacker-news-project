@@ -1,0 +1,9 @@
+body {
+    @apply bg-gray-100 text-gray-900;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .container {
+    @apply max-w-4xl mx-auto;
+  }
