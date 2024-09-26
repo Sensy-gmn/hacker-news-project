@@ -1,0 +1,17 @@
+:root {
+    --darkpurple: #1d1128;
+    --majorelleblue: #6e54ff;
+    --mauve: #b5a8ff;
+    --periwinkle: #ccccea;
+    --white: #fffdfd;
+}
+
+* {
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+
+.container h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}

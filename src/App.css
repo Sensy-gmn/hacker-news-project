@@ -1,0 +1,21 @@
+:root {
+    --darkpurple: #1d1128;
+    --majorelleblue: #6e54ff;
+    --mauve: #b5a8ff;
+    --periwinkle: #ccccea;
+    --white: #fffdfd;
+}
+
+* {
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 0;
+    gap: 32px;
+}

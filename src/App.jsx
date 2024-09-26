@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import InfoCard from "./infoCard";
 import axios from "axios";
+import './infoCard.css';
+import './App.css';
 
 function App() {
     const [data, setData] = useState([]);
@@ -18,7 +20,6 @@ function App() {
 
     return (
         <>
-            <h1>Home</h1>
             {data.length > 0 && data.map((item) => <InfoCard key={item.id} item={item} />)}
         </>
     );
