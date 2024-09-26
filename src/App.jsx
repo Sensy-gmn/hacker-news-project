@@ -4,7 +4,9 @@ import NewsList from './components/NewsList';
 import ThemeToggle from './components/ThemeToggle';
 import './App.css';
 
+// Composant principal de l'application
 const App = () => {
+  // Définition de l'état pour la requête de recherche et la pagination
   const [searchQuery, setSearchQuery] = useState('');
   const [page, setPage] = useState(0);
 
