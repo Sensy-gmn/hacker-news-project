@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import ArticleDetails from "./Components/ArticleDetails";
-
+import Navbar from "./Components/Navbar";
 function App() {
     // ------------------------------------------ PAGINATION ------------------------------------------//
     const [articles, setArticles] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
+
     const limitArticleByPage = 15;
 
     const handleNextPage = () => {
@@ -38,11 +39,10 @@ function App() {
         fetchArticles(currentPage, "story", limitArticleByPage);
     }, [currentPage]);
 
-    console.log(articles);
-
     return (
         <>
             <div className="container mx-auto mt-12 p-4">
+                <Navbar />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {articles.map((article) => (
                         <ArticleDetails
