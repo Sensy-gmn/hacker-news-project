@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import ArticleDetails from "./Components/ArticleDetails";
 import Navbar from "./Components/Navbar";
+
 function App() {
     // ------------------------------------------ PAGINATION ------------------------------------------//
     const [articles, setArticles] = useState([]);
